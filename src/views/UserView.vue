@@ -10,22 +10,20 @@ import axios from "@/config/axios/index.js";
 export default {
   data() {
     return {
-      name: "",
-      email: "",
+      name: "Loading...",
+      email: "Loading...",
     };
   },
-  methods: {
-    handleLogin() {
-      axios
-        .post("authorized-user")
-        .then((response) => {
-          this.name = response.data.name;
-          this.email = response.data.email;
-        })
-        .catch((error) => {
-          alert(error.response.data.message);
-        });
-    },
+  mounted() {
+    axios
+      .post("authorized-user")
+      .then((response) => {
+        this.name = response.data.name;
+        this.email = response.data.email;
+      })
+      .catch((error) => {
+        alert(error.response.data.message);
+      });
   },
 };
 </script>
