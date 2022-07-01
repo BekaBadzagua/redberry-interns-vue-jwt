@@ -21,6 +21,8 @@
 </template>
 <script>
 import axios from "@/config/axios/index.js";
+import { setJwtToken } from "@/helpers/jwt/index.js";
+
 export default {
   data() {
     return {
@@ -39,11 +41,7 @@ export default {
         .then((response) => {
           alert("Login Successful!");
 
-          let date = new Date();
-          date.setTime(date.getTime() + response.data.expires_in * 1000);
-          const expires = "expires=" + date.toUTCString();
-
-          document.cookie = `jwt_token=${response.data.access_token}; ${expires}; path=/`;
+          setJwtToken(response.data.access_token, response.data.expires_in);
 
           this.$router.push({ name: "movies" });
         })

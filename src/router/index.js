@@ -4,21 +4,7 @@ import RegisterView from "@/views/RegisterView.vue";
 import LoginView from "@/views/LoginView.vue";
 import MoviesView from "@/views/MoviesView.vue";
 import UserView from "@/views/UserView.vue";
-
-function isAuthenticated(_, _2, next) {
-  let token = null;
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`jwt_token=`);
-  if (parts.length === 2) {
-    token = parts.pop().split(";").shift();
-  }
-
-  if (token) {
-    next(true);
-  } else {
-    next(false);
-  }
-}
+import { isAuthenticated } from "@/router/guards.js";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

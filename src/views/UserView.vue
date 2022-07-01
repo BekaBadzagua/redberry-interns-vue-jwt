@@ -10,8 +10,8 @@ import axios from "@/config/axios/index.js";
 export default {
   data() {
     return {
-      name: "Placeholder",
-      email: "Placeholder@gmail.com",
+      name: "",
+      email: "",
     };
   },
   methods: {
