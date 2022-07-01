@@ -1,48 +1,40 @@
-# redberry-interns-vue-jwt
+# JWT Vue3
 
-This template should help get you started developing with Vue 3 in Vite.
+I created this application as a guideline for Redberry interns.
 
-## Recommended IDE Setup
+There is also [Laravel Api](https://github.com/BekaBadzagua/redberry-interns-laravel-jwt-api) application, Which serves as an Api for this project. 
+This is a simple app where user can register and log in. also authorized user is able to fetch movies from api, and go on the /user page, where the personal information is provided.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Table of Contents
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+* [Tech Stack](#tech-stack)
+* [Getting Started](#getting-started)
 
-## Project Setup
+
+<h2 id="tech-stack">Tech Stack:</h2>
+
+- vue 3
+- Vite
+
+
+<h2 id="getting-started">Getting Started:</h2>
+
+```sh
+git clone https://github.com/BekaBadzagua/redberry-interns-vue-jwt
+```
+
+```sh
+cd redberry-interns-vue-jwt
+```
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Serve the Application
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
